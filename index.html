@@ -335,7 +335,7 @@
 
     .hero-title span {
       color: var(--accent);
-      text-shadow: 0 0 32px var(--primary-glow);
+      text-shadow: 0 0 32px rgba(0, 212, 255, 0.4);
     }
 
     body.light .hero-title span {
@@ -345,7 +345,7 @@
     .hero-sub {
       font-family: 'Exo 2', sans-serif;
       font-weight: 300;
-      font-size: 0.85rem;
+      font-size: 0.74rem;
       color: var(--text-dim);
       line-height: 1.9;
       max-width: 620px;
@@ -627,17 +627,12 @@
       border-radius: 2px;
     }
 
-    @media(max-width:900px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
+    body.nav-compact .nav-links { display: none; }
+    body.nav-compact .hamburger { display: flex; }
 
     @media(max-width:640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
       .page {
         padding: calc(var(--nav-h) + 1rem) 1.1rem 4rem;
       }
@@ -842,6 +837,7 @@
     function setLogo(t) { const el = document.getElementById('logoImg'); if (el) el.src = t === 'light' ? 'https://h3ad-sec.github.io/logo-light.png' : 'https://h3ad-sec.github.io/logo-dark.png'; }
     function toggleTheme() { document.body.classList.toggle('light'); const t = document.body.classList.contains('light') ? 'light' : 'dark'; localStorage.setItem('theme', t); setLogo(t); }
     const saved = localStorage.getItem('theme'); if (saved === 'light') { document.body.classList.add('light'); setLogo('light'); } else setLogo('dark');
+    (function(){var pill=document.getElementById('xv-nav-pill'),links=document.querySelector('.nav-links'),toggle=document.querySelector('.theme-toggle'),G=20;function check(){if(!links)return;document.body.classList.remove('nav-compact');links.style.visibility='hidden';var lr=links.getBoundingClientRect(),pr=pill?pill.getBoundingClientRect().right:60,tl=toggle?toggle.getBoundingClientRect().left:window.innerWidth-60;links.style.visibility='';document.body.classList.toggle('nav-compact',(pr+G>lr.left)||(lr.right+G>tl));}check();window.addEventListener('resize',check);})();
   </script>
 </body>
 
