@@ -300,7 +300,8 @@
       border: 1px solid var(--border);
       border-radius: 6px;
       overflow: hidden;
-      flex-shrink: 0;
+      flex-shrink: 1;
+      min-width: 0;
       margin-left: 0.75rem;
     }
     .xv-pill-name {
@@ -668,10 +669,70 @@
 
       .terminal-body {
         padding: 1.1rem 1.25rem;
+        overflow-x: auto;
+      }
+
+      .terminal {
+        overflow-x: auto;
+      }
+
+      .feat-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       }
 
       footer {
         padding: 1.2rem 1.25rem;
+      }
+    }
+
+    @media(max-width:480px) {
+      .page {
+        padding: calc(var(--nav-h) + 0.75rem) 0.9rem 3rem;
+      }
+
+      .feat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-sub {
+        font-size: 0.82rem;
+      }
+
+      .hero-title {
+        font-size: clamp(1.2rem, 7vw, 1.8rem);
+        white-space: normal;
+      }
+
+      .terminal-body {
+        padding: 0.9rem 0.9rem;
+        overflow-x: auto;
+      }
+
+      .out {
+        padding-left: 0.75rem;
+        word-break: break-word;
+      }
+
+      .prompt {
+        font-size: 0.72rem;
+      }
+
+      .status-row {
+        margin: 1rem 0 1.5rem;
+      }
+
+      .xv-pill {
+        display: none;
+      }
+    }
+
+    @media(max-width:360px) {
+      .page {
+        padding: calc(var(--nav-h) + 0.5rem) 0.75rem 2.5rem;
+      }
+
+      .hero-sub {
+        font-size: 0.78rem;
       }
     }
   </style>
