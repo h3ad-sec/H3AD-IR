@@ -294,38 +294,11 @@
     }
 
     /* Nav pill */
-    .xv-pill {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-      flex-shrink: 1;
-      min-width: 0;
-      margin-left: 0.75rem;
-    }
-    .xv-pill-name {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
-      padding: 4px 10px;
-      color: var(--muted);
-      white-space: nowrap;
-      border-right: 1px solid var(--border);
-    }
-    .xv-pill-name .pill-accent {
-      color: var(--accent);
-    }
-    .xv-pill-tagline {
-      font-family: 'Exo 2', sans-serif;
-      font-weight: 400;
-      font-size: 0.63rem;
-      padding: 4px 10px;
-      color: var(--muted);
-      white-space: nowrap;
-    }
+    .xv-nav-pill{display:flex;flex-direction:column;align-items:flex-start;gap:1px;margin-left:10px;padding-left:10px;border-left:1px solid var(--border);white-space:nowrap;flex-shrink:0;text-decoration:none;}
+    .xv-pill-name{font-family:'Share Tech Mono',monospace;font-weight:700;font-size:13px;letter-spacing:4px;line-height:1;}
+    .xv-pill-accent{color:var(--accent);}
+    .xv-pill-text{color:var(--text);}
+    .xv-pill-tagline{font-family:'Exo 2',sans-serif;font-weight:400;font-size:8px;color:var(--muted);letter-spacing:1.5px;}
 
     .page {
       position: relative;
@@ -723,7 +696,7 @@
         margin: 1rem 0 1.5rem;
       }
 
-      .xv-pill {
+      .xv-nav-pill {
         display: none;
       }
     }
@@ -745,10 +718,10 @@
     <div class="hamburger" id="hamburger" onclick="toggleDrawer()"><span></span><span></span><span></span></div>
     <div class="nav-brand"><a href="https://h3ad-sec.github.io/"><img id="logoImg"
           src="https://h3ad-sec.github.io/logo-dark.png" alt="H3AD-SEC"></a></div>
-    <div class="xv-pill">
-      <span class="xv-pill-name"><span class="pill-accent">H3AD-</span>IR</span>
+    <a class="xv-nav-pill" href="#" style="text-decoration:none">
+      <span class="xv-pill-name"><span class="xv-pill-accent">H3AD-</span><span class="xv-pill-text">IR</span></span>
       <span class="xv-pill-tagline">Incident Response Module.</span>
-    </div>
+    </a>
     <div class="nav-links">
       <div class="nav-divider"></div>
       <a href="https://h3ad-sec.github.io/H3AD/" target="_blank" rel="noopener">H3AD</a>
