@@ -10,9 +10,7 @@ Live at: [h3ad-sec.github.io/H3AD-IR](https://h3ad-sec.github.io/H3AD-IR/)
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| [PHISHBOOK](https://h3ad-sec.github.io/PHISHBOOK/) | Phishing IR playbook — 9 phases with decision trees, embedded KQL templates, and enrichment tool links |
+Coming soon.
 
 ---
 
