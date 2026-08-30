@@ -301,11 +301,13 @@
       position: fixed;
       top: var(--nav-h);
       left: 0;
-      right: 0;
+      width: min(300px, 86vw);
       background: var(--panel);
+      border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
+      box-shadow: 6px 0 28px rgba(0, 0, 0, 0.35);
       z-index: 49;
-      padding: 0.75rem 1.25rem 1rem;
+      padding: 0.75rem 1rem 1rem;
       flex-direction: column;
       gap: 2px;
       max-height: calc(100vh - var(--nav-h));
@@ -352,7 +354,7 @@
     .page {
       position: relative;
       z-index: 1;
-      max-width: 860px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: calc(var(--nav-h) + 3rem) 2rem 7rem;
     }
@@ -718,9 +720,6 @@
       color: var(--accent);
       border: 1px solid rgba(0, 212, 255, 0.25);
     }
-  /* H3AD-SEC MENU SYNC: hamburger-only nav */
-.nav-links{display:none!important;}
-.hamburger{display:flex!important;}
   </style>
 </head>
 
@@ -777,7 +776,18 @@
       </div>
       <a href="https://h3ad-sec.github.io/H3AD-DF/">H3AD-DF</a>
       <a href="https://h3ad-sec.github.io/H3AD-IR/" class="nav-current">H3AD-IR</a>
-      <a href="https://h3ad-sec.github.io/H3AD-LEARN/">H3AD-LEARN</a>
+      <div class="nav-item">
+        <a href="https://h3ad-sec.github.io/H3AD-LEARN/">H3AD-LEARN</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-hunting/index.html" target="_blank" rel="noopener">THREAT HUNTING</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/lolbas/index.html" target="_blank" rel="noopener">LOLBAS</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-intel/index.html" target="_blank" rel="noopener">THREAT INTEL</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/cloud-security/index.html" target="_blank" rel="noopener">CLOUD SECURITY</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/interview-prep/index.html" target="_blank" rel="noopener">INTERVIEW PREP</a>
+          </div>
+        </div>
+      </div>
       <div class="nav-divider"></div>
       <a href="mailto:h3adsec@gmail.com">CONTACT</a>
     </div>
@@ -810,6 +820,11 @@
     <a href="https://h3ad-sec.github.io/H3AD-DF/" onclick="closeDrawer()">H3AD-DF</a>
     <a href="https://h3ad-sec.github.io/H3AD-IR/" onclick="closeDrawer()" class="nav-current">H3AD-IR</a>
     <a href="https://h3ad-sec.github.io/H3AD-LEARN/" onclick="closeDrawer()">H3AD-LEARN</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-hunting/index.html" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ THREAT HUNTING ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/lolbas/index.html" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ LOLBAS ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-intel/index.html" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ THREAT INTEL ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/cloud-security/index.html" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ CLOUD SECURITY ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/interview-prep/index.html" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ INTERVIEW PREP ↗</a>
     <a href="mailto:h3adsec@gmail.com" onclick="closeDrawer()">CONTACT</a>
   </div>
   <main>
